@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Content with Ruffle</title>
-    <script src="https://unpkg.com/ruffle-lib@latest/dist/ruffle.js"></script> <!-- Using CDN -->
+    <script src="https://unpkg.com/ruffle-lib@latest/dist/ruffle.js"></script> <!-- Ruffle JS CDN -->
 </head>
 <body>
     <h1>My Flash Content</h1>
     <div id="flash-content">
-        <!-- Your SWF file -->
-        <embed src="https://img.pog.com/cloud/y8-flash-game/contents/item_versions/flash_games/15767/original/socce__world_cup_2010.swf?1521346211" width="800" height="600" />
+        <!-- SWF content -->
+        <embed src="https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/soccer_game.swf" width="800" height="600" />
     </div>
+
     <script>
+        // Initialize Ruffle player
         const ruffle = window.RufflePlayer.newest();
         const player = ruffle.createPlayer();
         document.getElementById('flash-content').appendChild(player);
-        player.load('https://img.pog.com/cloud/y8-flash-game/contents/item_versions/flash_games/15767/original/socce__world_cup_2010.swf?1521346211');
+        
+        // Load SWF file
+        player.load('https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/soccer_game.swf');
     </script>
 </body>
 </html>
+
 
