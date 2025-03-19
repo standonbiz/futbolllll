@@ -1,26 +1,22 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Content with Ruffle</title>
-    <script src="https://unpkg.com/ruffle-lib@latest/dist/ruffle.js"></script> <!-- Ruffle JS CDN -->
+    <script src="ruffle/ruffle.js"></script> <!-- Path to your locally hosted ruffle.js -->
 </head>
 <body>
     <h1>My Flash Content</h1>
     <div id="flash-content">
-        <!-- SWF content -->
-        <embed src="https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/2d_knock_out.swf" width="800" height="600" />
+        <!-- Your SWF file -->
+        <embed src="https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/soccer_game.swf" width="800" height="600" />
     </div>
-
     <script>
-        // Initialize Ruffle player
         const ruffle = window.RufflePlayer.newest();
         const player = ruffle.createPlayer();
         document.getElementById('flash-content').appendChild(player);
-        
-        // Load SWF file
-        player.load('https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/2d_knock_out.swf');
+        player.load('https://raw.githubusercontent.com/standonbiz/futbolllll/main/swf/soccer_game.swf');
     </script>
 </body>
 </html>
